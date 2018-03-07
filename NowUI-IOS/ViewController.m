@@ -22,8 +22,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-    
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
 
@@ -33,7 +31,7 @@
     
     _instance = [[WXSDKInstance alloc] init];
     _instance.viewController = self;
-    _instance.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 0, self.view.frame.size.width, self.view.frame.size.height - 20);
+    _instance.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 20);
     
     __weak typeof(self) weakSelf = self;
     _instance.onCreate = ^(UIView *view) {
@@ -49,11 +47,11 @@
     _instance.renderFinish = ^ (UIView *view) {
         //process renderFinish
     };
+    
 //    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index.js" withExtension:@"js"];
 //    [_instance renderWithURL:url options:@{@"bundleUrl":[self.url absoluteString]} data:nil];
     NSString *path = [NSString stringWithFormat:@"http://h5.chuangshi.nowui.com/wawipet/dist/view/index.js"];
     [_instance renderWithURL:[NSURL URLWithString:path]];
-    NSLog(@"123456");
 }
 
 

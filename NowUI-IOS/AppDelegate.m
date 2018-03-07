@@ -30,10 +30,14 @@
     
     [WXSDKEngine initSDKEnvironment];
     
+    
     ViewController *viewController = [[ViewController alloc]init];
-    self.window = [[UIWindow alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.origin.x, [UIScreen mainScreen].bounds.origin.y + 20, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 0)];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [navigationController setNavigationBarHidden:YES animated:NO];
+    
+    self.window = [[UIWindow alloc]initWithFrame:CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 0)];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     
     return YES;
