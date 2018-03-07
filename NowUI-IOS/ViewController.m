@@ -35,7 +35,7 @@
     
     __weak typeof(self) weakSelf = self;
     _instance.onCreate = ^(UIView *view) {
-        [weakSelf.weexView removeFromSuperview];
+        [weakSelf.weexView removeFromSuperview]; 
         weakSelf.weexView = view;
         [weakSelf.view addSubview:weakSelf.weexView];
     };
