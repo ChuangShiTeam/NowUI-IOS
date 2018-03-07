@@ -13,6 +13,9 @@
 		049374F0204ECA0700735190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049374EF204ECA0700735190 /* Assets.xcassets */; };
 		049374F3204ECA0700735190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049374F1204ECA0700735190 /* LaunchScreen.storyboard */; };
 		049374F6204ECA0700735190 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 049374F5204ECA0700735190 /* main.m */; };
+		04C7BF9B204F03C900F09048 /* WXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C7BF9A204F03C900F09048 /* WXImgLoaderDefaultImpl.m */; };
+		04C7BFA3204F157D00F09048 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 04C7BFA2204F157D00F09048 /* .gitignore */; };
+		10B79789E9C683D83954AB2F /* libPods-NowUI-IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A6C1A5C01163EF64DEC553 /* libPods-NowUI-IOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		049374F2204ECA0700735190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049374F4204ECA0700735190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049374F5204ECA0700735190 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04C7BF99204F03C900F09048 /* WXImgLoaderDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXImgLoaderDefaultImpl.h; sourceTree = "<group>"; };
+		04C7BF9A204F03C900F09048 /* WXImgLoaderDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXImgLoaderDefaultImpl.m; sourceTree = "<group>"; };
+		04C7BFA2204F157D00F09048 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		31A6C1A5C01163EF64DEC553 /* libPods-NowUI-IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NowUI-IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B8432479B783F1334003A81 /* Pods-NowUI-IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NowUI-IOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-NowUI-IOS/Pods-NowUI-IOS.release.xcconfig"; sourceTree = "<group>"; };
+		CF256814C3744DEAB8246275 /* Pods-NowUI-IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NowUI-IOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NowUI-IOS/Pods-NowUI-IOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B79789E9C683D83954AB2F /* libPods-NowUI-IOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +52,11 @@
 		049374DA204ECA0600735190 = {
 			isa = PBXGroup;
 			children = (
+				04C7BFA2204F157D00F09048 /* .gitignore */,
 				049374E5204ECA0600735190 /* NowUI-IOS */,
 				049374E4204ECA0600735190 /* Products */,
+				91EDB20495FCDD7C58C74828 /* Pods */,
+				D68A3E227B9E48E6945A8274 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +71,8 @@
 		049374E5204ECA0600735190 /* NowUI-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				04C7BF99204F03C900F09048 /* WXImgLoaderDefaultImpl.h */,
+				04C7BF9A204F03C900F09048 /* WXImgLoaderDefaultImpl.m */,
 				049374E6204ECA0700735190 /* AppDelegate.h */,
 				049374E7204ECA0700735190 /* AppDelegate.m */,
 				049374E9204ECA0700735190 /* ViewController.h */,
@@ -71,6 +86,23 @@
 			path = "NowUI-IOS";
 			sourceTree = "<group>";
 		};
+		91EDB20495FCDD7C58C74828 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF256814C3744DEAB8246275 /* Pods-NowUI-IOS.debug.xcconfig */,
+				4B8432479B783F1334003A81 /* Pods-NowUI-IOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D68A3E227B9E48E6945A8274 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31A6C1A5C01163EF64DEC553 /* libPods-NowUI-IOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 049374F9204ECA0700735190 /* Build configuration list for PBXNativeTarget "NowUI-IOS" */;
 			buildPhases = (
+				7B3E209EA84F39C8B299324D /* [CP] Check Pods Manifest.lock */,
 				049374DF204ECA0600735190 /* Sources */,
 				049374E0204ECA0600735190 /* Frameworks */,
 				049374E1204ECA0600735190 /* Resources */,
+				FC9B833967208FD2204BBAF5 /* [CP] Embed Pods Frameworks */,
+				8A9FED38C9F24EA4117EFC0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C7BFA3204F157D00F09048 /* .gitignore in Resources */,
 				049374F3204ECA0700735190 /* LaunchScreen.storyboard in Resources */,
 				049374F0204ECA0700735190 /* Assets.xcassets in Resources */,
 				049374EE204ECA0700735190 /* Main.storyboard in Resources */,
@@ -137,12 +173,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7B3E209EA84F39C8B299324D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NowUI-IOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A9FED38C9F24EA4117EFC0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NowUI-IOS/Pods-NowUI-IOS-resources.sh",
+				"${PODS_ROOT}/WeexSDK/pre-build/native-bundle-main.js",
+				"${PODS_ROOT}/WeexSDK/ios/sdk/WeexSDK/Resources/wx_load_error@3x.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/native-bundle-main.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/wx_load_error@3x.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NowUI-IOS/Pods-NowUI-IOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC9B833967208FD2204BBAF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NowUI-IOS/Pods-NowUI-IOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		049374DF204ECA0600735190 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				049374EB204ECA0700735190 /* ViewController.m in Sources */,
+				04C7BF9B204F03C900F09048 /* WXImgLoaderDefaultImpl.m in Sources */,
 				049374F6204ECA0700735190 /* main.m in Sources */,
 				049374E8204ECA0700735190 /* AppDelegate.m in Sources */,
 			);
@@ -218,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -276,6 +369,7 @@
 		};
 		049374FA204ECA0700735190 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF256814C3744DEAB8246275 /* Pods-NowUI-IOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +384,7 @@
 		};
 		049374FB204ECA0700735190 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B8432479B783F1334003A81 /* Pods-NowUI-IOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

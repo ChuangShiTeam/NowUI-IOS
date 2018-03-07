@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <WeexSDK/WeexSDK.h>
+#import "WXImgLoaderDefaultImpl.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [WXAppConfiguration setAppGroup:@"AliApp"];
+    [WXAppConfiguration setAppName:@"WeexDemo"];
+    [WXAppConfiguration setExternalUserAgent:@"ExternalUA"];
+    
+    [WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
+//    [WXSDKEngine registerHandler:[WXNavigationDefaultImpl new] withProtocol:@protocol(WXNavigationProtocol)];
+    
+    [WXSDKEngine initSDKEnvironment];
+    
+    ViewController *viewController = [[ViewController alloc]init];
+    self.window = [[UIWindow alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.origin.x, [UIScreen mainScreen].bounds.origin.y + 20, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 0)];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
