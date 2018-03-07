@@ -52,7 +52,7 @@
 //    [_instance renderWithURL:url options:@{@"bundleUrl":[self.url absoluteString]} data:nil];
     NSString *path = [NSString stringWithFormat:@"http://h5.chuangshi.nowui.com/wawipet/dist/view/index.js"];
     [_instance renderWithURL:[NSURL URLWithString:path]];
-    NSLog(@"123456");
+    NSLog(@"123456789");
 }
 
 
